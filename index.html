@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f6f3">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="MINIMAL">
+  <meta name="description" content="Your personal minimalist iPhone theme studio.">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon.svg">
+  <link rel="stylesheet" href="./style.css">
+  <title>MINIMAL — Theme Studio</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="MINIMAL home"><span class="brand-mark"></span>MINIMAL<span class="brand-dot">.</span></a>
+      <div class="top-actions">
+        <span class="status-label">THEME STUDIO</span>
+        <button id="modeButton" class="icon-button" aria-label="Toggle dark mode">◐</button>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">YOUR SPACE. YOUR STYLE.</p>
+        <h1>Less noise.<br><span>More you.</span></h1>
+        <p class="hero-copy">Create a look that feels like yours.</p>
+      </section>
+      <section class="section-block">
+        <div class="section-heading"><div><p class="eyebrow">01 / DISCOVER</p><h2>Find your aesthetic</h2></div><span class="muted">COLLECTION</span></div>
+        <div id="presetGrid" class="preset-grid"></div>
+      </section>
+      <section class="section-block studio-section">
+        <div class="section-heading"><div><p class="eyebrow">02 / CREATE</p><h2>Your theme</h2></div><span class="live-label"><span class="live-dot"></span> LIVE PREVIEW</span></div>
+        <div class="studio-layout">
+          <div class="phone-wrap">
+            <div id="phonePreview" class="phone-preview">
+              <div class="phone-island"></div><div class="phone-status"><span>9:41</span><span>●●● ▰</span></div>
+              <div class="phone-date" id="previewDate">MONDAY, OCTOBER 26</div><div class="phone-clock" id="previewClock">09:41</div>
+              <div class="phone-subtitle">A LITTLE SPACE TO BREATHE.</div>
+              <div class="widget-row"><div class="preview-widget"><span class="widget-symbol">☼</span><span class="widget-caption">TODAY</span><strong>Be present.</strong></div><div class="preview-widget mini-widget"><span class="widget-caption">FOCUS</span><strong>One thing<br>at a time.</strong></div></div>
+              <div class="preview-icons" id="previewIcons"><div class="preview-app"><span>◷</span><small>Clock</small></div><div class="preview-app"><span>♫</span><small>Music</small></div><div class="preview-app"><span>▦</span><small>Photos</small></div><div class="preview-app"><span>✉</span><small>Mail</small></div></div>
+              <div class="phone-dock"><span>●</span><span>◉</span><span>♫</span><span>✉</span></div>
+            </div>
+            <p class="preview-note">Concept preview · Not a live iOS screen</p>
+          </div>
+          <div class="editor">
+            <div class="field-group"><label for="themeName">THEME NAME</label><input id="themeName" type="text" maxlength="32" value="My Minimal Theme" placeholder="Name your theme"></div>
+            <div class="field-group"><label for="backgroundColor">BACKGROUND</label><div class="color-field"><input id="backgroundColor" type="color" value="#e9e7e0"><span id="backgroundHex">#E9E7E0</span></div></div>
+            <div class="field-group"><label for="accentColor">ACCENT COLOR</label><div class="color-field"><input id="accentColor" type="color" value="#75816a"><span id="accentHex">#75816A</span></div></div>
+            <div class="field-group"><label for="textColor">TEXT COLOR</label><div class="color-field"><input id="textColor" type="color" value="#252722"><span id="textHex">#252722</span></div></div>
+            <div class="field-group"><label for="wallpaperInput">YOUR WALLPAPER</label><label class="upload-button" for="wallpaperInput"><span>＋</span> Choose an image</label><input id="wallpaperInput" type="file" accept="image/*" hidden><button id="removeWallpaper" class="text-button hidden" type="button">Remove wallpaper</button><p class="help-text">Your image stays on this device.</p></div>
+            <div class="button-row"><button id="saveButton" class="primary-button">Save theme ↗</button><button id="exportButton" class="secondary-button">Export wallpaper</button></div>
+            <p id="statusMessage" class="status-message" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+      <section class="section-block">
+        <div class="section-heading"><div><p class="eyebrow">03 / YOUR COLLECTION</p><h2>Saved themes</h2></div><span id="savedCount" class="muted">0 SAVED</span></div>
+        <div id="savedThemes" class="saved-grid"></div>
+      </section>
+      <section class="section-block guide-section">
+        <p class="eyebrow">04 / MAKE IT YOURS</p><h2>Bring it to your iPhone.</h2>
+        <p>Export your wallpaper, save it to Photos, then set it as your Lock Screen or Home Screen wallpaper. Use iOS Home Screen customization to tint icons or arrange widgets.</p>
+        <a class="guide-link" href="https://support.apple.com/guide/iphone/customize-app-icons-widgets-and-wallpaper-iph4d0e6c351/ios" target="_blank" rel="noopener noreferrer">iPhone customization guide ↗</a>
+      </section>
+    </main>
+    <footer class="footer"><span>MINIMAL STUDIO © 2026</span><span>MADE FOR YOUR SPACE.</span></footer>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
